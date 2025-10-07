@@ -1,0 +1,127 @@
+/* ------------------------------------------- */
+/* 1. CARREGAMENTO DA FONTE PERSONALIZADA HALLIMUN */
+/* ------------------------------------------- */
+@font-face {
+    font-family: 'HallimunFont'; 
+    /* Caminho corrigido: O arquivo .ttf deve estar na mesma pasta deste CSS */
+    src: url('Halimun.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ================================== */
+/* 2. RESET E FUNDO DA PÁGINA         */
+/* ================================== */
+body {
+    background-color: #fffdf3; /* Fundo: Branco Cremoso (Original) */
+    font-family: Arial, sans-serif;
+    
+    /* Reset e centralização */
+    margin: 0; 
+    padding: 0;
+    text-align: center; 
+}
+
+/* ================================== */
+/* 3. CONTÊINER E IMAGEM              */
+/* ================================== */
+
+/* Contêiner que define o espaço da imagem e é o ponto de referência */
+.carta-container {
+    margin: 20px auto; 
+    max-width: 450px; 
+    width: 100%;
+    position: relative; 
+    text-align: center; 
+}
+
+/* Estilo da Imagem (Aplica-se a todas as páginas) */
+img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0; 
+}
+
+/* ================================== */
+/* 4. ESTILO DE LINKS/TEXTOS (TAMANHO 29.5PX) */
+/* ================================== */
+
+/* Estilo geral para o link principal (CENTRO) */
+a {
+    /* POSICIONAMENTO: Coloca o link no centro exato da imagem */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 10; 
+
+    /* Estilo do Link */
+    display: inline-block; 
+    padding: 0; 
+    background-color: transparent; 
+    border-radius: 0; 
+
+    /* APLICAÇÃO DO NOVO TAMANHO DE FONTE */
+    font-size: 25px !important; 
+    
+    /* Aplica a fonte customizada */
+    font-family: 'HallimunFont', Arial, sans-serif !important; 
+    font-weight: normal; 
+    
+    color: #7088a8; /* Cor do link */
+    text-decoration: underline; 
+    transition: color 0.3s;
+}
+
+/* Estilo para o TEXTO CENTRALIZADO (Páginas 2 e 3) */
+.texto-central {
+    /* POSICIONAMENTO: Centralizado */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 10; 
+    
+    /* APLICAÇÃO DO NOVO TAMANHO DE FONTE */
+    font-size: 20px !important; 
+
+    /* Estilização */
+    color: #000000; /* Cor: Preto Puro */
+    font-family: 'HallimunFont', sans-serif !important; 
+    font-weight: normal;
+    max-width: 80%;
+    text-align: center;
+}
+
+/* Efeito ao passar o mouse */
+a:hover {
+    color: #5c7491; 
+}
+
+/* ================================== */
+/* 5. LINKS DE RODAPÉ (Canto Inferior)*/
+/* ================================== */
+
+/* Regra Base para todos os links de rodapé (anula o posicionamento central) */
+.rodape-link, .link-esquerdo {
+    /* Usa a mesma força de fonte */
+    font-size: 20px !important; 
+    
+    top: auto; 
+    left: auto; 
+    transform: none; 
+}
+
+
+/* Link 2: CANTO INFERIOR DIREITO */
+.rodape-link {
+    bottom: 25px; 
+    right: 25px; 
+}
+
+/* Link 3: CANTO INFERIOR ESQUERDO */
+.link-esquerdo {
+    bottom: 25px; /* Margem de 25px do rodapé */
+    left: 25px;  /* Margem de 25px da lateral esquerda */
+}
